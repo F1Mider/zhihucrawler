@@ -1,8 +1,12 @@
 import pandas as pd
 
-questionID = 326486872
-filename = str(questionID) + '.csv'
+questionID = 28997957
+filename = "output/" + str(questionID) + '.csv'
 
-df = pd.read_csv(filename, encoding='UTF-8')
+df = pd.read_csv("combine.csv", encoding='UTF-8')
 
-print(df)
+df2 = df[df['content'].str.contains('日本')]
+print(df2.shape)
+
+print(df2)
+
