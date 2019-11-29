@@ -17,7 +17,7 @@ df = pd.read_csv("comments.csv", encoding='UTF-8')
 
 print(df)
 
-df.to_excel('comments_unedited.xlsx')
+# df.to_excel('comments_unedited.xlsx')
 
 li2 = list()
 
@@ -45,12 +45,14 @@ df.rename({'Unnamed: 0': 'no'}, axis=1, inplace=True)
 
 print(df.columns)
 
+
+
 # Unnamed: 0	allow_delete	allow_like	allow_reply	allow_vote	author	can_collapse	can_recommend	collapsed
 # content	created_time	disliked	featured	id	is_author	is_delete	is_parent_author	reply_to_author
 # resource_type	reviewing	type	url	vote_count	voting
 
 # df2 = df[['no', 'id', 'created', 'created_time', 'updated', 'updated_time', 'content', 'voteup_count', 'comment_count', 'question', 'author']]
-df2 = df[['no', 'id', 'created', 'created_time', 'content', 'vote_count', 'is_author', 'is_parent_author', 'filename', 'author']]
+df2 = df[['no', 'id', 'created', 'created_time', 'content', 'vote_count', 'feature', 'dislike', 'voting', 'reply_to_author', 'resource_type', 'filename', 'author']]
 
 print(df2.shape)
 
